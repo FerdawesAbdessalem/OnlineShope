@@ -71,7 +71,7 @@ function product_image(array $product): string
     if (!empty($product['image'])) {
         return '/uploads/' . rawurlencode($product['image']);
     }
-    return '/assets/img/' . ($product['category_icon'] ?? 'box') . '.svg';
+    return '/media/products/' . (int) $product['id'] . '.svg';
 }
 
 const ORDER_STATUSES = [

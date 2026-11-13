@@ -65,6 +65,19 @@ final class ShopController
         ]);
     }
 
+    /** Generated illustration for products without an uploaded photo. */
+    public function productArt(array $params): string
+    {
+        $product = $this->app->products->find((int) $params['id'], false);
+        if (!$product) {
+            http_response_code(404);
+            return '';
+        }
+        header('Content-Type: image/svg+xml; charset=utf-8');
+        header('Cache-Control: public, max-age=86400');
+        return \App\ProductArt::svg($product);
+    }
+
     // ------------------------------------------------------------------ cart
     public function cart(): string
     {

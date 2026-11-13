@@ -1,6 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FEF2F2"/><stop offset="1" stop-color="#FDE0E0"/></linearGradient></defs><rect width="400" height="300" rx="28" fill="url(#g)"/>
-<path d="M200 50 L290 86 V150 C290 205 250 238 200 256 C150 238 110 205 110 150 V86 Z" fill="#991B1B"/>
-<path d="M200 70 L272 99 V150 C272 194 240 222 200 237 Z" fill="#B91C1C"/>
-<rect x="170" y="140" width="60" height="50" rx="8" fill="#FECACA"/>
-<path d="M182 140v-14a18 18 0 0 1 36 0v14" fill="none" stroke="#FECACA" stroke-width="9"/>
-<circle cx="200" cy="162" r="7" fill="#991B1B"/><rect x="197" y="164" width="6" height="14" rx="3" fill="#991B1B"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#FEF2F2"/><stop offset="1" stop-color="#FCDEDE"/></radialGradient>
+  <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a4357"/><stop offset=".5" stop-color="#1f2533"/><stop offset="1" stop-color="#11151e"/></linearGradient>
+  <linearGradient id="bodyLight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe4ec"/></linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DC2626" stop-opacity=".85"/><stop offset="1" stop-color="#DC2626"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur stdDeviation="9"/></filter>
+  <filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="2.2"/></filter>
+</defs>
+<rect width="400" height="300" fill="url(#bg)"/>
+<circle cx="330" cy="52" r="90" fill="#DC2626" opacity=".06"/>
+<circle cx="52" cy="262" r="70" fill="#DC2626" opacity=".05"/>
+<ellipse cx="200" cy="232" rx="160" ry="12" fill="#0f172a" opacity=".22" filter="url(#shadow)"/><rect x="44" y="134" width="312" height="80" rx="12" fill="url(#body)"/><rect x="44" y="134" width="312" height="14" rx="7" fill="#ffffff" opacity=".07"/><path d="M110 152 L132 160 V176 C132 190 122 198 110 202 C98 198 88 190 88 176 V160 Z" fill="#DC2626"/><rect x="102" y="172" width="16" height="13" rx="2" fill="#fff"/><path d="M105 172 v-4 a5 5 0 0 1 10 0 v4" fill="none" stroke="#fff" stroke-width="2.5"/><circle cx="150" cy="182" r="5" fill="#4ade80" filter="url(#glow)" opacity=".9"/><circle cx="150" cy="182" r="2.6" fill="#fff"/><circle cx="170" cy="182" r="5" fill="#DC2626" filter="url(#glow)" opacity=".9"/><circle cx="170" cy="182" r="2.6" fill="#fff"/><rect x="196" y="176" width="16" height="12" rx="2" fill="#0b0e14" stroke="#4b5568"/><rect x="218" y="176" width="16" height="12" rx="2" fill="#0b0e14" stroke="#4b5568"/><rect x="240" y="176" width="16" height="12" rx="2" fill="#0b0e14" stroke="#4b5568"/><rect x="262" y="176" width="16" height="12" rx="2" fill="#0b0e14" stroke="#4b5568"/><rect x="284" y="176" width="16" height="12" rx="2" fill="#0b0e14" stroke="#4b5568"/><rect x="306" y="176" width="16" height="12" rx="2" fill="#0b0e14" stroke="#4b5568"/><text x="150" y="160" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="2" fill="#94a3b8">FORTINET</text>
+</svg>

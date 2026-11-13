@@ -1,10 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E8F0FF"/><stop offset="1" stop-color="#D4E2FF"/></linearGradient></defs><rect width="400" height="300" rx="28" fill="url(#g)"/>
-<line x1="140" y1="150" x2="120" y2="70" stroke="#1E3A8A" stroke-width="8" stroke-linecap="round"/>
-<line x1="260" y1="150" x2="280" y2="70" stroke="#1E3A8A" stroke-width="8" stroke-linecap="round"/>
-<rect x="90" y="140" width="220" height="80" rx="18" fill="#1E3A8A"/>
-<rect x="90" y="140" width="220" height="26" rx="13" fill="#2B4FB8"/>
-<g fill="#4ADE80"><circle cx="130" cy="192" r="6"/><circle cx="152" cy="192" r="6"/></g>
-<circle cx="174" cy="192" r="6" fill="#FBBF24"/>
-<g fill="#93A9E8"><rect x="210" y="184" width="16" height="14" rx="3"/><rect x="232" y="184" width="16" height="14" rx="3"/><rect x="254" y="184" width="16" height="14" rx="3"/><rect x="276" y="184" width="16" height="14" rx="3"/></g>
-<path d="M175 60a35 35 0 0 1 50 0" fill="none" stroke="#2563EB" stroke-width="6" stroke-linecap="round" opacity=".6"/>
-<path d="M162 46a54 54 0 0 1 76 0" fill="none" stroke="#2563EB" stroke-width="6" stroke-linecap="round" opacity=".35"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#EEF4FF"/><stop offset="1" stop-color="#D6E4FF"/></radialGradient>
+  <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a4357"/><stop offset=".5" stop-color="#1f2533"/><stop offset="1" stop-color="#11151e"/></linearGradient>
+  <linearGradient id="bodyLight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe4ec"/></linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB" stop-opacity=".85"/><stop offset="1" stop-color="#2563EB"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur stdDeviation="9"/></filter>
+  <filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="2.2"/></filter>
+</defs>
+<rect width="400" height="300" fill="url(#bg)"/>
+<circle cx="330" cy="52" r="90" fill="#2563EB" opacity=".06"/>
+<circle cx="52" cy="262" r="70" fill="#2563EB" opacity=".05"/>
+<ellipse cx="200" cy="236" rx="135" ry="12" fill="#0f172a" opacity=".22" filter="url(#shadow)"/><rect x="112" y="58" width="9" height="98" rx="4.5" fill="url(#body)" transform="rotate(-12 116 156)"/><rect x="279" y="58" width="9" height="98" rx="4.5" fill="url(#body)" transform="rotate(12 284 156)"/><rect x="196" y="72" width="8" height="84" rx="4" fill="url(#body)"/><path d="M78 150 Q78 138 92 138 H308 Q322 138 322 150 L332 214 Q334 226 320 226 H80 Q66 226 68 214 Z" fill="url(#body)"/><path d="M84 148 Q86 142 94 142 H306 Q314 142 316 148 L318 158 H82 Z" fill="#ffffff" opacity=".08"/><rect x="92" y="166" width="216" height="3" rx="1.5" fill="#2563EB" opacity=".7"/><circle cx="104" cy="190" r="5" fill="#4ade80" filter="url(#glow)" opacity=".9"/><circle cx="104" cy="190" r="2.6" fill="#fff"/><circle cx="124" cy="190" r="5" fill="#4ade80" filter="url(#glow)" opacity=".9"/><circle cx="124" cy="190" r="2.6" fill="#fff"/><circle cx="144" cy="190" r="5" fill="#facc15" filter="url(#glow)" opacity=".9"/><circle cx="144" cy="190" r="2.6" fill="#fff"/><circle cx="164" cy="190" r="5" fill="#2563EB" filter="url(#glow)" opacity=".9"/><circle cx="164" cy="190" r="2.6" fill="#fff"/><rect x="196" y="184" width="16" height="12" rx="2" fill="#0b0e14" stroke="#4b5568"/><rect x="200" y="186" width="8" height="3" fill="#64748b"/><rect x="218" y="184" width="16" height="12" rx="2" fill="#0b0e14" stroke="#4b5568"/><rect x="222" y="186" width="8" height="3" fill="#64748b"/><rect x="240" y="184" width="16" height="12" rx="2" fill="#0b0e14" stroke="#4b5568"/><rect x="244" y="186" width="8" height="3" fill="#64748b"/><rect x="262" y="184" width="16" height="12" rx="2" fill="#0b0e14" stroke="#4b5568"/><rect x="266" y="186" width="8" height="3" fill="#64748b"/><rect x="284" y="184" width="16" height="12" rx="2" fill="#0b0e14" stroke="#4b5568"/><rect x="288" y="186" width="8" height="3" fill="#64748b"/><text x="92" y="214" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="2" fill="#94a3b8">TP-LINK</text>
+</svg>

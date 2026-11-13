@@ -58,6 +58,7 @@ $router = new Router();
 $router->get('/', [$shop, 'home']);
 $router->get('/products', [$shop, 'catalog']);
 $router->get('/products/{id}', [$shop, 'product']);
+$router->get('/media/products/{id}.svg', [$shop, 'productArt']);
 $router->get('/cart', [$shop, 'cart']);
 $router->post('/cart/add', [$shop, 'addToCart']);
 $router->post('/cart/update', [$shop, 'updateCart']);

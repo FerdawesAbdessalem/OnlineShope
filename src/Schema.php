@@ -75,6 +75,42 @@ final class Schema
         }
     }
 
+    /**
+     * Demo orders spread over the last 7 days, so the back-office dashboard
+     * shows a realistic sales chart. Only used by `php bin/setup.php --demo-orders`.
+     */
+    public static function seedDemoOrders(PDO $pdo): void
+    {
+        if ((int) $pdo->query('SELECT COUNT(*) FROM orders')->fetchColumn() > 0) {
+            return;
+        }
+        $customer = (int) $pdo->query("SELECT id FROM users WHERE role = 'customer' ORDER BY id LIMIT 1")->fetchColumn();
+        $products = $pdo->query('SELECT id, name, price_cents FROM products ORDER BY id')->fetchAll();
+        $plan = [ // [days ago, status, [product index => quantity]]
+            [6, 'delivered', [0 => 1, 9 => 4]], [6, 'delivered', [3 => 2]],
+            [5, 'delivered', [6 => 1, 9 => 2]], [4, 'shipped', [4 => 1]],
+            [4, 'delivered', [1 => 1]], [3, 'shipped', [7 => 1, 11 => 2]],
+            [2, 'paid', [12 => 1]], [2, 'cancelled', [5 => 1]],
+            [1, 'paid', [0 => 2, 3 => 1]], [0, 'pending', [6 => 2]], [0, 'pending', [13 => 1, 9 => 3]],
+        ];
+        $cities = ['Tunis', 'Sousse', 'Sfax', 'Monastir', 'Nabeul', 'Bizerte'];
+        $order = $pdo->prepare('INSERT INTO orders (user_id, status, total_cents, shipping_name, shipping_address, shipping_city, phone, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
+        $item = $pdo->prepare('INSERT INTO order_items (order_id, product_id, product_name, unit_price_cents, quantity) VALUES (?, ?, ?, ?, ?)');
+        foreach ($plan as $n => [$daysAgo, $status, $lines]) {
+            $total = 0;
+            foreach ($lines as $index => $qty) {
+                $total += (int) $products[$index]['price_cents'] * $qty;
+            }
+            $date = (new \DateTimeImmutable('today'))->modify("-$daysAgo days")->setTime(9 + $n % 9, 10 + $n * 3)->format('Y-m-d H:i:s');
+            $order->execute([$customer, $status, $total, 'Client Démo', ($n + 3) . ' avenue de la République', $cities[$n % count($cities)], '+216 20 000 0' . str_pad((string) $n, 2, '0', STR_PAD_LEFT), $date]);
+            $orderId = (int) $pdo->lastInsertId();
+            foreach ($lines as $index => $qty) {
+                $p = $products[$index];
+                $item->execute([$orderId, $p['id'], $p['name'], $p['price_cents'], $qty]);
+            }
+        }
+    }
+
     /** Demo catalogue + an admin and a customer account. */
     public static function seed(PDO $pdo, string $adminPassword, string $customerPassword): void
     {

@@ -1,4 +1,5 @@
-<?php /** @var array $summary */ ?>
+<?php /** @var App\View $view @var array $summary */ ?>
+<?= $view->partial('partials/steps', ['current' => 1]) ?>
 <h1>Mon panier</h1>
 
 <?php if (!$summary['lines']): ?>

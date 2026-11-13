@@ -1,8 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5F3FF"/><stop offset="1" stop-color="#E4DEFF"/></linearGradient></defs><rect width="400" height="300" rx="28" fill="url(#g)"/>
-<ellipse cx="200" cy="225" rx="110" ry="22" fill="#5B21B6" opacity=".15"/>
-<ellipse cx="200" cy="200" rx="100" ry="30" fill="#4C1D95"/>
-<ellipse cx="200" cy="192" rx="100" ry="30" fill="#6D28D9"/>
-<circle cx="200" cy="192" r="8" fill="#C4B5FD"/>
-<path d="M150 120a72 72 0 0 1 100 0" fill="none" stroke="#7C3AED" stroke-width="10" stroke-linecap="round"/>
-<path d="M126 92a106 106 0 0 1 148 0" fill="none" stroke="#7C3AED" stroke-width="10" stroke-linecap="round" opacity=".6"/>
-<path d="M172 146a38 38 0 0 1 56 0" fill="none" stroke="#7C3AED" stroke-width="10" stroke-linecap="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img">
+<defs>
+  <radialGradient id="bg" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#F5F3FF"/><stop offset="1" stop-color="#E6DFFF"/></radialGradient>
+  <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a4357"/><stop offset=".5" stop-color="#1f2533"/><stop offset="1" stop-color="#11151e"/></linearGradient>
+  <linearGradient id="bodyLight" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfe4ec"/></linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C3AED" stop-opacity=".85"/><stop offset="1" stop-color="#7C3AED"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur stdDeviation="9"/></filter>
+  <filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="2.2"/></filter>
+</defs>
+<rect width="400" height="300" fill="url(#bg)"/>
+<circle cx="330" cy="52" r="90" fill="#7C3AED" opacity=".06"/>
+<circle cx="52" cy="262" r="70" fill="#7C3AED" opacity=".05"/>
+<ellipse cx="200" cy="232" rx="120" ry="14" fill="#0f172a" opacity=".22" filter="url(#shadow)"/><ellipse cx="200" cy="196" rx="116" ry="34" fill="#cbd2dd"/><ellipse cx="200" cy="186" rx="116" ry="34" fill="url(#bodyLight)"/><ellipse cx="200" cy="182" rx="98" ry="26" fill="#ffffff"/><ellipse cx="200" cy="182" rx="34" ry="9" fill="none" stroke="#7C3AED" stroke-width="5" filter="url(#glow)"/><ellipse cx="200" cy="182" rx="34" ry="9" fill="none" stroke="#7C3AED" stroke-width="2"/><path d="M150 104 a70 70 0 0 1 100 0" fill="none" stroke="#7C3AED" stroke-width="9" stroke-linecap="round" opacity=".85"/><path d="M126 78 a104 104 0 0 1 148 0" fill="none" stroke="#7C3AED" stroke-width="9" stroke-linecap="round" opacity=".45"/><path d="M172 128 a36 36 0 0 1 56 0" fill="none" stroke="#7C3AED" stroke-width="9" stroke-linecap="round"/><text x="170" y="214" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" letter-spacing="2" fill="#94a3b8">UBIQUITI</text>
+</svg>

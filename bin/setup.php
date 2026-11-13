@@ -24,6 +24,11 @@ Schema::seed(
     Config::get('DEMO_CUSTOMER_PASSWORD', 'Client@2025'),
 );
 
+if (in_array('--demo-orders', $argv, true)) {
+    Schema::seedDemoOrders($pdo);
+    echo "Commandes de démonstration ajoutées.\n";
+}
+
 echo "Base de données prête (" . $pdo->getAttribute(PDO::ATTR_DRIVER_NAME) . ").\n";
 echo "Admin  : admin@mfbuy.test  / " . Config::get('ADMIN_PASSWORD', 'Admin@2025') . "\n";
 echo "Client : client@mfbuy.test / " . Config::get('DEMO_CUSTOMER_PASSWORD', 'Client@2025') . "\n";

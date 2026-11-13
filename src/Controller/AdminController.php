@@ -25,6 +25,9 @@ final class AdminController
             'customers' => $this->app->users->countCustomers(),
             'lowStock' => $this->app->products->lowStock(),
             'latest' => array_slice($this->app->orders->all(), 0, 6),
+            'daily' => $this->app->orders->dailyRevenue(7),
+            'byStatus' => $this->app->orders->countByStatus(),
+            'productCount' => count($this->app->products->allForAdmin()),
         ]);
     }
 

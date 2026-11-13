@@ -8,6 +8,7 @@ $field = static function (string $name, string $label, string $type = 'text', st
         . '</div>';
 };
 ?>
+<?= $view->partial('partials/steps', ['current' => 2]) ?>
 <h1>Finaliser la commande</h1>
 <div class="cart-layout">
     <form action="/checkout" method="post" class="card form" novalidate>
