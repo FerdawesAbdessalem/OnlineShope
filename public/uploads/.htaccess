@@ -1,0 +1,5 @@
+# Uploaded images are never executed as PHP
+php_flag engine off
+<FilesMatch "\.(php|phar|phtml)$">
+    Require all denied
+</FilesMatch>

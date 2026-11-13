@@ -1,0 +1,7 @@
+.git
+vendor
+.env
+database/*.sqlite
+public/uploads/*
+Bureau
+.vscode

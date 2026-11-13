@@ -1,0 +1,34 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      DB_DSN: mysql:host=db;port=3306;dbname=mf_buy;charset=utf8mb4
+      DB_USER: mf_buy
+      DB_PASSWORD: mf_buy_secret
+      ADMIN_PASSWORD: Admin@2025
+      DEMO_CUSTOMER_PASSWORD: Client@2025
+    volumes:
+      - uploads:/var/www/html/public/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_DATABASE: mf_buy
+      MARIADB_USER: mf_buy
+      MARIADB_PASSWORD: mf_buy_secret
+      MARIADB_ROOT_PASSWORD: root_secret
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      retries: 10
+
+volumes:
+  uploads:
+  db_data:

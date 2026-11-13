@@ -1,0 +1,13 @@
+# Local environment
+.env
+/vendor/
+/database/*.sqlite
+/public/uploads/*
+!/public/uploads/.gitkeep
+!/public/uploads/.htaccess
+.phpunit.result.cache
+.phpunit.cache/
+
+# Not part of the project
+/Bureau/
+/.vscode/
